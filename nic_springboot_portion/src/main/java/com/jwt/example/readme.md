@@ -1,0 +1,21 @@
+- before we were using the User inside the spring now we want to create our user so now we need to create a user entity 
+- to store the user in the database
+- we dont need to have that userservice we created because now we will get that from database
+- now as we created the user entity ourself we need to tell thespring security about the User
+- we will give the user such properties which were having with springsecurity as details
+- so we has a property userdetail withspring security which represents user details'
+- this basically represents userdetails for example authorities getpassword,ec
+- now we will create a userdetailservice which will actually interact with the databse
+- comment the userservice from the appconfig file as now whener we will have injection this new file will be in use
+- we need to tell the jparepo which entity we are working on (user) and then the primaryId(type)
+- we will use its service in customUserDetailService
+- now we will use this userdetailsservice in the security config and other files 
+- we will be in need of creating another bean dao authentication provider for(database)-> create the bean inside security config
+- now we have our customed detailservice
+- now we have to write another method for creating service in userService
+- so that we remove temporary data from it we will use userRepository
+- Now we will create an api from where we will create User -> Auth controller
+- inside that we need user repository so we will autowire it
+- made the create user public by permitting the create-user path
+- we also have to include password into our service
+- 
